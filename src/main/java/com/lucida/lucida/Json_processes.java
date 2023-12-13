@@ -15,17 +15,20 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 class Json_processes {
-    public static void json_write(String name,String weight,String height,String key) {
+    public static void json_write(String name,String surname,String weight,String height,String key,String cinsiyet) {
         JSONObject data = new JSONObject();
         data.put("name", name);
+        data.put("surname", surname);
         data.put("weight", weight);
         data.put("height", height);
+        data.put("cinsiyet", cinsiyet);
         data.put("key",key);
+
 
         JSONArray list=new JSONArray();
         list.add(data);
 
-        try(FileWriter file=new FileWriter("registration.json")){
+        try(FileWriter file=new FileWriter(surname+'_'+name+ ".json")){
             file.write(list.toJSONString());
             file.flush();
         }
@@ -44,9 +47,12 @@ class Json_processes {
         JSONObject data= (JSONObject) parser.parse(new FileReader(json_patch));
         String[] select=new String[4];
         select[0]= (String) data.get("name");
-        select[1]= (String) data.get("weight");
-        select[2]= (String) data.get("height");
+        select[1]= (String) data.get("surname");
+        select[2]= (String) data.get("weight");
+        select[3]= (String) data.get("height");
+        select[3]= (String) data.get("cinsiyet");
         select[3]= (String) data.get("key");
+
         return select;
     }
 
