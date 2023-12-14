@@ -3,10 +3,12 @@ package com.lucida.lucida;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
+
+import com.lucida.lucida.enums.GenderEnum;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -26,8 +28,7 @@ public class BKIController implements Initializable {
     @FXML
     private TextField soyadfx;
 
-    @FXML
-    private Button button;
+
 
     @FXML
     private TextField kilokg;
@@ -60,24 +61,23 @@ public class BKIController implements Initializable {
         bkihesap.setText(String.valueOf(df.format(bki)));
 
         ToggleGroup gender = new ToggleGroup();
-        erkek = new RadioButton("Erkek");
+        erkek = new RadioButton(GenderEnum.MALE.getValue());
         erkek.setToggleGroup(gender);
-        kadin = new RadioButton("Kadın");
+        kadin = new RadioButton(GenderEnum.FEMALE.getValue());
         kadin.setToggleGroup(gender);
     }
 
     @FXML
     private void goToNextPage(ActionEvent event) throws Exception {
-        //sonraki sahnenin oluşturulması ve DEVAM yazan butona tıklandığında sonraki sahneye geçiş(Radiobutton ve bki hesaplama seçildi mi kontrol yapmadım)
-        //Seçilen radiobuttona göre erkek veya kadın görselinin sonraki sahnede belirlenmesi
+
 
         String gender = this.saveFields();
 
-        if (gender.equals("Kadın"))
+        if (gender.equals(GenderEnum.FEMALE.getValue()))
             loadWomenAnatomyWindow();
 
         // TODO: Erkek anatomi sayfası eklenecek
-//        else if (gender.equals("Erkek")) {
+//        else if (gender.equals(GenderEnum.MALE.getValue())) {
 //            loadManAnatomyWindow();
 //        }
     }
