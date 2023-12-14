@@ -11,18 +11,18 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lucida.lucida.BKIController">
     <children>
         <Button fx:id="button" layoutX="78.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonAction" text="BKI Hesapla" />
-        <Text layoutX="85.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilonuz :">
+        <Text layoutX="308.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilonuz :">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </Text>
-        <Text layoutX="80.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boyunuz :">
+        <Text layoutX="303.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boyunuz :">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </Text>
-        <TextField fx:id="kilokg" layoutX="172.0" layoutY="63.0" promptText="KG" />
-        <TextField fx:id="boymt" layoutX="172.0" layoutY="105.0" promptText="Metre" />
+        <TextField fx:id="kilokg" layoutX="383.0" layoutY="63.0" promptText="KG" />
+        <TextField fx:id="boymt" layoutX="383.0" layoutY="105.0" promptText="Metre" />
         <TextField fx:id="bkihesap" layoutX="172.0" layoutY="162.0" promptText="BKI" />
         <RadioButton fx:id="kadinid" layoutX="74.0" layoutY="279.0" mnemonicParsing="false" text="Kadın">
             <font>
@@ -47,5 +47,17 @@
                 <Font size="19.0" />
             </font>
         </Button>
+      <TextField fx:id="Adfx" layoutX="106.0" layoutY="63.0" />
+      <TextField fx:id="soyadfx" layoutX="106.0" layoutY="104.0" />
+      <Text layoutX="48.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adınız:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soyadınız:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>
