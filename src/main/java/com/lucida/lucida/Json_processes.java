@@ -15,15 +15,15 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 class Json_processes {
-    public static void json_write(String name,String surname,String weight,String height,String key,String cinsiyet) {
+    public static void json_write(String name,String surname,String weight,String height,String key,String gender,String vki) {
         JSONObject data = new JSONObject();
         data.put("name", name);
         data.put("surname", surname);
         data.put("weight", weight);
         data.put("height", height);
-        data.put("cinsiyet", cinsiyet);
+        data.put("cinsiyet", gender);
         data.put("key",key);
-
+        data.put("vki",vki);
 
         JSONArray list=new JSONArray();
         list.add(data);
@@ -39,19 +39,18 @@ class Json_processes {
     public static String json_read(String json_patch,String desired) throws IOException, ParseException {
         JSONParser parser=new JSONParser();
         JSONObject data= (JSONObject) parser.parse(new FileReader(json_patch));
-        String select= (String) data.get(desired);
-        return select;
+        return (String) data.get(desired);
         }
-    public static String[] json_all_read(String json_patch,String desired) throws IOException, ParseException {
+    public static String[] json_all_read(String json_patch) throws IOException, ParseException {
         JSONParser parser=new JSONParser();
         JSONObject data= (JSONObject) parser.parse(new FileReader(json_patch));
-        String[] select=new String[4];
+        String[] select=new String[6];
         select[0]= (String) data.get("name");
         select[1]= (String) data.get("surname");
         select[2]= (String) data.get("weight");
         select[3]= (String) data.get("height");
-        select[3]= (String) data.get("cinsiyet");
-        select[3]= (String) data.get("key");
+        select[4]= (String) data.get("gender");
+        select[5]= (String) data.get("key");
 
         return select;
     }

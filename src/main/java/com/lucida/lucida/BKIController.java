@@ -93,8 +93,9 @@ public class BKIController implements Initializable {
         String boy = this.boymt.getText();
         String activationCode = "1234";
         String gender = ((RadioButton) this.tgCinsiyet.getSelectedToggle()).getText();
+        String vki="25";
 
-        Json_processes.json_write(ad, soyad, kilo, boy, activationCode, gender);
+        Json_processes.json_write(ad, soyad, kilo, boy, activationCode, gender,vki);
 
         return gender;
     }
