@@ -7,12 +7,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 public class ImageApplication {
 
+    //Resim yüklendi
     private Image image() throws MalformedURLException, FileNotFoundException {
-
-        InputStream inputStream = new FileInputStream(new GenderController().GenderImg());
+        InputStream inputStream = new FileInputStream("C:/CODES/Ludisa/src/main/Image/mann_muscle_anatomy.jpg");
         Image image = new Image(inputStream);
         return image;
     }
