@@ -1,4 +1,4 @@
-package com.lucida.lucida;
+package com.lucida;
 
 public class BackMuscleGroup {
     protected int FixX(int x) {

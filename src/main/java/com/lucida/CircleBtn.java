@@ -1,4 +1,4 @@
-package com.lucida.lucida;
+package com.lucida;
 
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseEvent;

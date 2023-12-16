@@ -1,5 +1,6 @@
-package com.lucida.lucida;
+package com.lucida;
 
+import com.lucida.bodyParts.*;
 import javafx.scene.layout.StackPane;
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;

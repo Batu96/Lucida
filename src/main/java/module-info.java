@@ -5,8 +5,8 @@ module com.lucida.lucida {
     requires json.simple;
 
 
-    opens com.lucida.lucida to javafx.fxml;
-    exports com.lucida.lucida;
-    exports com.lucida.lucida.bodyParts;
-    opens com.lucida.lucida.bodyParts to javafx.fxml;
+    opens com.lucida to javafx.fxml;
+    exports com.lucida;
+    exports com.lucida.bodyParts;
+    opens com.lucida.bodyParts to javafx.fxml;
 }

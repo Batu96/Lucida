@@ -1,4 +1,4 @@
-package com.lucida.lucida;
+package com.lucida;
 
 public class GenderController {
     //private String gender= String.valueOf(GenderEnum.MALE); Projeyi birleştirirken gender stringi kaldırıp enumdan cindiyeti çekmemiz gerek

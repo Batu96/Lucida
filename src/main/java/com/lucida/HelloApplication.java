@@ -1,4 +1,4 @@
-package com.lucida.lucida;
+package com.lucida;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
