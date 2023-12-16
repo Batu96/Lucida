@@ -1,4 +1,4 @@
-package com.example.ludisa;
+package com.lucida.lucida;
 
 import javafx.scene.control.Button;
 

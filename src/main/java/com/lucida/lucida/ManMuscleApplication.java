@@ -1,4 +1,4 @@
-package com.example.ludisa;
+package com.lucida.lucida;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
