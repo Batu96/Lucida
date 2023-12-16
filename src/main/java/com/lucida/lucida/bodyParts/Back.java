@@ -1,15 +1,11 @@
-package com.lucida.lucida.bodyParts;
+package com.lucida.lucida;
 
-import com.lucida.lucida.CircleBtn;
-import javafx.scene.Cursor;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 
-public class Back {
+public class Back extends BackMuscleGroup{
+
+    GenderController genderController=new GenderController();
     public Circle Back(){
-
-        return  new CircleBtn().CircleBtn(120,-100,30);
+        return  new CircleBtn().CircleBtn(FixX(120),-100,30);
     }
 }

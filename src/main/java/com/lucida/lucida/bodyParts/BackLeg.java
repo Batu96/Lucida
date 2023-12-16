@@ -1,18 +1,13 @@
-package com.lucida.lucida.bodyParts;
+package com.lucida.lucida;
 
-import com.lucida.lucida.CircleBtn;
-import javafx.scene.Cursor;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 
-public class BackLeg {
+public class BackLeg extends BackMuscleGroup{
     public Circle BackLeftLeg(){
-        return new CircleBtn().CircleBtn(95,10,20);
+        return new CircleBtn().CircleBtn(FixX(95),10,20);
     }
 
     public Circle BackRightLeg(){
-        return new CircleBtn().CircleBtn(145,10,20);
+        return new CircleBtn().CircleBtn(FixX(145),10,20);
     }
 }
