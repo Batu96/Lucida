@@ -13,7 +13,7 @@ public class ImageApplication {
 
     //Resim yüklendi
     private Image image() throws MalformedURLException, FileNotFoundException {
-        InputStream inputStream = new FileInputStream("C:/CODES/Ludisa/src/main/Image/mann_muscle_anatomy.jpg");
+        InputStream inputStream = new FileInputStream("src/main/java/com/lucida/lucida/Image/mann_muscle_anatomy.jpg");
         Image image = new Image(inputStream);
         return image;
     }

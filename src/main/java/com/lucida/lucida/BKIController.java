@@ -101,7 +101,7 @@ public class BKIController implements Initializable {
     }
 
     private void loadWomenAnatomyWindow() throws Exception {
-        womenAnatomyStage womenAnatomy = new womenAnatomyStage();
+        WomenAnatomyStage womenAnatomy = new WomenAnatomyStage();
         womenAnatomy.start((Stage) this.anchorPane.getScene().getWindow());
     }
 }
