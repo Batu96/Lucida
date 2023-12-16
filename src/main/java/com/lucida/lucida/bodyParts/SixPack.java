@@ -1,5 +1,6 @@
-package com.lucida.lucida;
+package com.lucida.lucida.bodyParts;
 
+import com.lucida.lucida.CircleBtn;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;

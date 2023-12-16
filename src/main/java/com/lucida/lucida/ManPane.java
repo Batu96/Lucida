@@ -1,5 +1,6 @@
 package com.lucida.lucida;
 
+import com.lucida.lucida.bodyParts.*;
 import javafx.scene.layout.StackPane;
 
 import java.io.FileNotFoundException;

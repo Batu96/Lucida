@@ -7,4 +7,6 @@ module com.lucida.lucida {
 
     opens com.lucida.lucida to javafx.fxml;
     exports com.lucida.lucida;
+    exports com.lucida.lucida.bodyParts;
+    opens com.lucida.lucida.bodyParts to javafx.fxml;
 }
