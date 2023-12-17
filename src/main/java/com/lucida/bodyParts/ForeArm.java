@@ -1,11 +1,7 @@
-package com.lucida.lucida.bodyParts;
+package com.lucida.bodyParts;
 
-import com.lucida.lucida.CircleBtn;
-import javafx.scene.Cursor;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
+import com.lucida.CircleBtn;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 
 public class ForeArm {
     public Circle LeftForeArm(){

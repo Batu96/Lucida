@@ -1,5 +1,7 @@
-package com.lucida.lucida;
+package com.lucida.bodyParts;
 
+import com.lucida.BackMuscleGroup;
+import com.lucida.CircleBtn;
 import javafx.scene.shape.Circle;
 
 public class Calf extends BackMuscleGroup {

@@ -1,8 +1,10 @@
-package com.lucida.lucida;
+package com.lucida.bodyParts;
 
+import com.lucida.BackMuscleGroup;
+import com.lucida.CircleBtn;
 import javafx.scene.shape.Circle;
 
-public class Triceps extends BackMuscleGroup{
+public class Triceps extends BackMuscleGroup {
     public Circle LeftTriceps(){
         return new CircleBtn().CircleBtn(FixX(75),-95,10);
     }
