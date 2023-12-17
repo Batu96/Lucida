@@ -6,7 +6,10 @@ import java.util.Base64;
 
 public class Generator {
     private static final String AES = "AES";
-    private static String generator_activation_code(String name,String surname,String weight,String height,String gender,String vki ,String history,String key) throws Exception {
+    // Yusuftan alınan datalar
+
+String name = "Yusuf";
+    protected static String generator_activation_code(String name,String surname,String weight,String height,String gender,String vki ,String history,String key) throws Exception {
         String data = name + "|" + surname + "|" + weight + "|" + height + "|" + gender + "|" + vki + "|" + history;
         String enc_msg=encrypt(data,key);
         return enc_msg+"//"+key;

@@ -13,7 +13,8 @@ public class ImageApplication {
 
     //Resim yüklendi
     private Image image() throws MalformedURLException, FileNotFoundException {
-        InputStream inputStream = new FileInputStream("src/main/java/com/lucida/lucida/Image/mann_muscle_anatomy.jpg");
+        GenderController genderController=new GenderController();
+        InputStream inputStream = new FileInputStream(genderController.GenderImg());
         Image image = new Image(inputStream);
         return image;
     }

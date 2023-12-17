@@ -12,7 +12,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Activation_Page{
-
+    public Stage stage = new Stage();
+    public boolean isValid=false;
     public void event_button(String ac){
 
         String de_text=Generator.resolve_activation_code(ac);
@@ -28,11 +29,14 @@ public class Activation_Page{
         }
         else{
             //TODO:Geçilecek sayfa
+
+            isValid=true;
+
             //ac değişkeninde aktivasyon kodunu çözülümüş hali var isim|soyad... şeklinde
         }
     }
-    public void First_Page(){
-        Stage stage = new Stage();
+    public void firstPage(){
+
         BorderPane pane = new BorderPane();
         Scene scene = new Scene(pane, 800, 600);
 
@@ -46,16 +50,17 @@ public class Activation_Page{
         pane.setCenter(textField);
 
         Button button = new Button("Giriş");
+        button.setPrefSize(100, 50);
         button.setOnAction(e -> {
             String ac = textField.getText();
             event_button(ac);
         });
         BorderPane.setAlignment(button, Pos.BOTTOM_CENTER);
         pane.setBottom(button);
-
         stage.setTitle("Aktivasyon");
         stage.setScene(scene);
         stage.show();
 
     }
+
 }

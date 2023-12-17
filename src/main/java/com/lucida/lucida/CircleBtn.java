@@ -8,14 +8,16 @@ import javafx.stage.Stage;
 
 public class CircleBtn {
     GenderController genderController=new GenderController();
+
     public Circle CircleBtn(int x,int y,int r){
         Circle circle = new Circle(x,y,r);
         if(genderController.getGender().equals("Kadın")){
             circle.setTranslateX(x-7);
             circle.setTranslateY(y+10);
-            circle.setFill(Color.TRANSPARENT);
+            circle.setFill(Color.YELLOW);
             circle.setCursor(Cursor.HAND);
             circle.addEventHandler(MouseEvent.MOUSE_CLICKED, event->{
+
                 Stage newStage = new Stage();
                 newStage.show();
             });
@@ -23,9 +25,10 @@ public class CircleBtn {
         else{
             circle.setTranslateX(x);
             circle.setTranslateY(y-10);
-            circle.setFill(Color.TRANSPARENT);
+            circle.setFill(Color.YELLOW);
             circle.setCursor(Cursor.HAND);
             circle.addEventHandler(MouseEvent.MOUSE_CLICKED, event->{
+
                 Stage newStage = new Stage();
                 newStage.show();
             });

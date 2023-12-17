@@ -4,6 +4,11 @@ import com.lucida.lucida.CircleBtn;
 import javafx.scene.shape.Circle;
 
 public class Biceps {
+    private final String mov1="Incline Dumbbell Curl ";
+    private final String mov2="Concentration Curl";
+    private final String video1="https://www.youtube.com/embed/aG7CXiKxepw";
+    private final String video2="https://www.youtube.com/embed/VMbDQ8PZazY";
+
     public Circle LeftBiceps(){
         return new CircleBtn().CircleBtn(-132,-95,10);
     }

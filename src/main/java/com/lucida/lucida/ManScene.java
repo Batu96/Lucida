@@ -7,7 +7,8 @@ import java.net.MalformedURLException;
 
 public class ManScene {
     public Scene Scene() throws MalformedURLException, FileNotFoundException {
-        Scene scene = new Scene(new ManPane().pane());
+        Scene scene = new Scene(new ManPane().pane(), 1000, 600);
+
         return scene;
     }
 }
