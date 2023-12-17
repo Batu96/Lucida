@@ -1,8 +1,8 @@
-package com.lucida.bodyParts;
+package com.lucida.lucida.bodyParts;
 
-import com.lucida.BackMuscleGroup;
-import com.lucida.CircleBtn;
-import com.lucida.GenderController;
+import com.lucida.lucida.BackMuscleGroup;
+import com.lucida.lucida.CircleBtn;
+import com.lucida.lucida.GenderController;
 import javafx.scene.shape.Circle;
 
 public class Back extends BackMuscleGroup {

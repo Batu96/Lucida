@@ -1,4 +1,4 @@
-package com.lucida;
+package com.lucida.lucida;
 
 
 

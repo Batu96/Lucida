@@ -1,6 +1,6 @@
-package com.lucida.bodyParts;
+package com.lucida.lucida.bodyParts;
 
-import com.lucida.CircleBtn;
+import com.lucida.lucida.CircleBtn;
 import javafx.scene.shape.Circle;
 
 public class Leg {

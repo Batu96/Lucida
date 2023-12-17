@@ -1,4 +1,4 @@
-package com.lucida.enums;
+package com.lucida.lucida.enums;
 
 public enum GenderEnum {
     FEMALE("Kadın"),

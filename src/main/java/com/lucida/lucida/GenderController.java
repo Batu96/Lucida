@@ -1,4 +1,4 @@
-package com.lucida;
+package com.lucida.lucida;
 
 public class GenderController {
     //private String gender= String.valueOf(GenderEnum.MALE); Projeyi birleştirirken gender stringi kaldırıp enumdan cindiyeti çekmemiz gerek
@@ -11,10 +11,10 @@ public class GenderController {
 
     public String GenderImg() {
         if (gender.equals("Erkek")) {
-            genderImg = "C:/CODES/Ludisa/src/main/Image/mann_muscle_anatomy.jpg";
+            genderImg = "src/main/java/com/lucida/lucida/Image/mann_muscle_anatomy.jpg";
 
         } else {
-            genderImg = "C:/CODES/Ludisa/src/main/Image/woman_muscle_anatomy.jpg";
+            genderImg = "src/main/java/com/lucida/lucida/Image/woman_muscle_anatomy.jpg";
         }
         return genderImg;
     }

@@ -1,4 +1,4 @@
-package com.lucida;
+package com.lucida.lucida;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

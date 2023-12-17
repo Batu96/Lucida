@@ -1,10 +1,10 @@
-package com.lucida;
+package com.lucida.lucida;
 
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
-import com.lucida.enums.GenderEnum;
+import com.lucida.lucida.enums.GenderEnum;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
