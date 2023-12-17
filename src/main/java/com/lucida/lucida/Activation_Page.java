@@ -62,6 +62,7 @@ public class Activation_Page{
         pane.setCenter(textField);
 
         Button button = new Button("Giriş");
+        button.setStyle("-fx-font-size: 20;");
         button.setPrefSize(100, 50);
         button.setOnAction(e -> {
             String ac = textField.getText();

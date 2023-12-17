@@ -20,6 +20,8 @@ public class ImageApplication {
     }
     public ImageView imageView() throws MalformedURLException, FileNotFoundException {
         ImageView imageView =new ImageView(image());
+        imageView.setFitHeight(500);
+        imageView.setFitWidth(500);
         return imageView;
     }
 }

@@ -1,16 +1,17 @@
 package com.lucida.lucida;
 
+import com.lucida.lucida.enums.GenderEnum;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Notlar {
-    public static void createNote(String text){
+    static String  note="";
+    public static void createNote(String text) {
         String fileName = "notlarim.txt";
 
         try (
@@ -22,18 +23,35 @@ public class Notlar {
             System.err.println("Error creating the note file: " + e.getMessage());
         }
     }
-    public Scene noteScene(){
+    public static void readerNote() {
+        String fileName = "notlarim.txt";
+        try (
+                BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line = reader.readLine();
+            while (line != null) {
+                note += line;
+                line = reader.readLine();
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error reading the note file: " + e.getMessage());
+        }
+    }
+
+    public Scene noteScene() {
         Pane root = new Pane();
-        Scene scene = new Scene(root);
-        TextArea notlarim = new TextArea();
-        notlarim.setPrefSize(600, 300);
-        notlarim.setLayoutX(50);
-        notlarim.setLayoutY(50);
+        Scene scene = new Scene(root, 700, 500);
+        TextArea notlarimArea = new TextArea();
+        readerNote();
+        notlarimArea.setText(note);
+        notlarimArea.setPrefSize(600, 300);
+        notlarimArea.setLayoutX(50);
+        notlarimArea.setLayoutY(50);
         Button saveBtn = new Button("Kaydet");
         saveBtn.setLayoutX(50);
         saveBtn.setLayoutY(360);
         saveBtn.setOnAction(e -> {
-            String notlar = notlarim.getText();
+            String notlar = notlarimArea.getText();
             Notlar.createNote(notlar);
         });
 
@@ -41,13 +59,15 @@ public class Notlar {
         backBtn.setLayoutX(600);
         backBtn.setLayoutY(360);
         backBtn.setOnAction(e -> {
-//            try {
-//                new ManScene().start(stage);
-//            } catch (Exception exception) {
-//                exception.printStackTrace();
-//            }
+            try {
+                Stage stage = (Stage) backBtn.getScene().getWindow();
+                Scene scene1 = new ManScene().Scene();
+                stage.setScene(scene1);
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
         });
-        root.getChildren().addAll(notlarim , saveBtn , backBtn);
+        root.getChildren().addAll(notlarimArea, saveBtn, backBtn);
         return scene;
     }
 }

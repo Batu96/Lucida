@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class WomenAnatomyStage extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(new ManPane().pane(), 1000, 600);
+        Scene scene = new Scene(new ManPane().pane(), 1200, 700);
         stage.setScene(scene);
         stage.setTitle("Kadın Anatomisi");
         stage.show();
