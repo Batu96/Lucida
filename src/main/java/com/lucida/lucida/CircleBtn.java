@@ -17,7 +17,7 @@ public class CircleBtn {
         if(genderController.getGender().equals("Kadın")){
             circle.setTranslateX(x-7);
             circle.setTranslateY(y+10);
-            circle.setFill(Color.YELLOW);
+            circle.setFill(Color.TRANSPARENT);
             circle.setCursor(Cursor.HAND);
             circle.addEventHandler(MouseEvent.MOUSE_CLICKED, event->{
                 // I want to know which circle is clicked
@@ -85,7 +85,7 @@ public class CircleBtn {
         else{
             circle.setTranslateX(x);
             circle.setTranslateY(y-10);
-            circle.setFill(Color.YELLOW);
+            circle.setFill(Color.TRANSPARENT);
             circle.setCursor(Cursor.HAND);
             circle.addEventHandler(MouseEvent.MOUSE_CLICKED, event->{
                 switch ((int)circle.getCenterY()){

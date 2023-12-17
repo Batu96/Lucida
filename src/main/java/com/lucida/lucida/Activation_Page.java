@@ -28,11 +28,7 @@ public class Activation_Page{
             estage.show();
         }
         else{
-            //TODO:Geçilecek sayfa
-
             isValid=true;
-
-            //ac değişkeninde aktivasyon kodunu çözülümüş hali var isim|soyad... şeklinde
         }
     }
     public void firstPage(){
