@@ -2,7 +2,11 @@ package com.lucida.lucida;
 
 
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -11,10 +15,13 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.Objects;
+
 public class Activation_Page{
     public Stage stage = new Stage();
     public boolean isValid=false;
-    public void event_button(String ac){
+    public void event_button(ActionEvent e, String ac){
 
         String de_text=Generator.resolve_activation_code(ac);
         if(de_text==null){//yeni bir sayfa açıp hata mesajı oluşturuyor
@@ -28,7 +35,16 @@ public class Activation_Page{
             estage.show();
         }
         else{
-            isValid=true;
+            Stage stage_test = (Stage)((Node) e.getSource()).getScene().getWindow();
+            try {
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/SceneBKIGender.fxml")));
+                Scene scene = new Scene(root);
+                stage_test.setTitle("Ludica");
+                stage_test.setScene(scene);
+                stage_test.show();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
     public void firstPage(){
@@ -49,7 +65,7 @@ public class Activation_Page{
         button.setPrefSize(100, 50);
         button.setOnAction(e -> {
             String ac = textField.getText();
-            event_button(ac);
+            event_button(e, ac);
         });
         BorderPane.setAlignment(button, Pos.BOTTOM_CENTER);
         pane.setBottom(button);

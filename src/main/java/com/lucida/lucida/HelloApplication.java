@@ -20,20 +20,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws Exception {
         System.out.println(Generator.generator_activation_code( ));
         Activation_Page activation_page=new Activation_Page();
-
         activation_page.firstPage();
-
-        if(activation_page.isValid){
-
-            activation_page.stage.close();
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/SceneBKIGender.fxml")));
-            Scene scene = new Scene(root);
-            stage.setTitle("Ludica");
-            stage.setScene(scene);
-            stage.show();
-        }
-
     }
 
     public static void main(String[] args) {
