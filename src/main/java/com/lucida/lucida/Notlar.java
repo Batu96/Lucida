@@ -19,7 +19,7 @@ public class Notlar {
             writer.write(text);
 
         } catch (IOException e) {
-            System.err.println("Error creating the test file: " + e.getMessage());
+            System.err.println("Error creating the note file: " + e.getMessage());
         }
     }
     public Scene noteScene(){
