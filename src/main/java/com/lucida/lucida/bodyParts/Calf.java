@@ -17,4 +17,20 @@ public class Calf extends BackMuscleGroup {
     public Circle RightCalf(){
         return new CircleBtn().CircleBtn(FixX(150),60,15);
     }
+
+    public String getMov1() {
+        return mov1;
+    }
+
+    public String getMov2() {
+        return mov2;
+    }
+
+    public String getVideo1() {
+        return video1;
+    }
+
+    public String getVideo2() {
+        return video2;
+    }
 }

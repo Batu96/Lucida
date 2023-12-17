@@ -16,5 +16,22 @@ public class BackLeg extends BackMuscleGroup {
 
     public Circle BackRightLeg(){
         return new CircleBtn().CircleBtn(FixX(145),10,20);
+
+    }
+
+    public String getMov1() {
+        return mov1;
+    }
+
+    public String getMov2() {
+        return mov2;
+    }
+
+    public String getVideo1() {
+        return video1;
+    }
+
+    public String getVideo2() {
+        return video2;
     }
 }
