@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -49,17 +50,19 @@ public class Activation_Page{
     }
     public void firstPage(){
 
-        BorderPane pane = new BorderPane();
+        Pane pane = new Pane();
         Scene scene = new Scene(pane, 800, 600);
 
         Text text = new Text("Aktivasyon kodu");
         text.setFont(Font.font(24));
-        BorderPane.setAlignment(text, Pos.TOP_CENTER);
-        pane.setTop(text);
+        text.setLayoutX(scene.getWidth() / 2 - 100);
+        text.setLayoutY(scene.getHeight() / 2 - 100);
+
 
         TextField textField = new TextField();
-        BorderPane.setAlignment(textField, Pos.CENTER);
-        pane.setCenter(textField);
+        textField.setPrefSize(550, 20);
+        textField.setLayoutX(scene.getWidth() / 2 - 275);
+        textField.setLayoutY(scene.getHeight() / 2 - 10);
 
         Button button = new Button("Giriş");
         button.setStyle("-fx-font-size: 20;");
@@ -68,8 +71,9 @@ public class Activation_Page{
             String ac = textField.getText();
             event_button(e, ac);
         });
-        BorderPane.setAlignment(button, Pos.BOTTOM_CENTER);
-        pane.setBottom(button);
+        button.setLayoutX(scene.getWidth() / 2 - 50);
+        button.setLayoutY(scene.getHeight() / 2 + 50);
+       pane.getChildren().addAll(text, textField, button);
         stage.setTitle("Aktivasyon");
         stage.setScene(scene);
         stage.show();
