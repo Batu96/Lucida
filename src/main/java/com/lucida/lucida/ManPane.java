@@ -30,6 +30,7 @@ public class ManPane {
         pane.getChildren().add(new Back().Back());
         pane.getChildren().add(new Triceps().LeftTriceps());
         pane.getChildren().add(new Triceps().RightTriceps());
+        pane.getChildren().add(new ButtonApplication().label());
         return pane;
     }
 

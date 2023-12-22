@@ -5,12 +5,22 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class ButtonApplication {
+    public Label label(){
+        Label label = new Label();
+        label.setTranslateX(500);
+        label.setTranslateY(-200);
+        label.setText("BKI:"+new BKIController().bkilabel);
+        label.setFont(new Font("Arial", 20));
+        return label;
+    }
     public Button UpdateButton(){
         Button btn = new Button();
         btn.setText("Güncelle");

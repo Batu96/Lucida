@@ -51,21 +51,24 @@ public class BKIController implements Initializable {
     private ToggleGroup tgCinsiyet;
 
 
+
+
+    public static String bkilabel="";
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private  void  handleButtonAction(ActionEvent event) {
 
         double kg = Double.parseDouble(kilokg.getText());
         double boy = Double.parseDouble(boymt.getText());
         double bki = kg / (boy * boy);
-
+        bkilabel = String.valueOf(bki);
         DecimalFormat df = new DecimalFormat("#.00");
         bkihesap.setText(String.valueOf(df.format(bki)));
-
         ToggleGroup gender = new ToggleGroup();
         erkek = new RadioButton(GenderEnum.MALE.getValue());
         erkek.setToggleGroup(gender);
         kadin = new RadioButton(GenderEnum.FEMALE.getValue());
         kadin.setToggleGroup(gender);
+        bkilabel = String.valueOf(bki);
     }
 
     @FXML
