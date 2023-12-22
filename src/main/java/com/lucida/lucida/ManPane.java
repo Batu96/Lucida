@@ -1,7 +1,9 @@
 package com.lucida.lucida;
 
 import com.lucida.lucida.bodyParts.*;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
@@ -30,7 +32,23 @@ public class ManPane {
         pane.getChildren().add(new Back().Back());
         pane.getChildren().add(new Triceps().LeftTriceps());
         pane.getChildren().add(new Triceps().RightTriceps());
-        pane.getChildren().add(new ButtonApplication().label());
+        Label label2 = new Label();
+        label2.setTranslateX(500);
+        label2.setTranslateY(-250);
+        label2.setText(BKIController.gender);
+        label2.setStyle("-fx-font-size: 20;");
+        pane.getChildren().addAll(new ButtonApplication().label(), label2);
+        Image image = new Image("file:src/main/java/com/lucida/lucida/Image/9442811.jpg");
+        BackgroundImage backImage = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT
+        );
+        Background background = new Background(backImage);
+        pane.setBackground(background);
+
+
         return pane;
     }
 

@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +22,8 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws Exception {
         System.out.println(Generator.generator_activation_code( ));
         Activation_Page activation_page=new Activation_Page();
+
+
         activation_page.firstPage();
     }
 

@@ -10,8 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -43,6 +43,7 @@ public class Activation_Page{
                 stage_test.setTitle("Ludica");
                 stage_test.setScene(scene);
                 stage_test.show();
+
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
@@ -74,6 +75,15 @@ public class Activation_Page{
         button.setLayoutX(scene.getWidth() / 2 - 50);
         button.setLayoutY(scene.getHeight() / 2 + 50);
        pane.getChildren().addAll(text, textField, button);
+        Image image = new Image("file:src/main/java/com/lucida/lucida/Image/rsz_9442811.jpg");
+        BackgroundImage backImage = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT
+        );
+        Background background = new Background(backImage);
+        pane.setBackground(background);
         stage.setTitle("Aktivasyon");
         stage.setScene(scene);
         stage.show();

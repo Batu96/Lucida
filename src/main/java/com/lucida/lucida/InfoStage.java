@@ -2,7 +2,8 @@ package com.lucida.lucida;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.web.WebView;
 
 public class InfoStage{
@@ -30,6 +31,15 @@ public class InfoStage{
             webView.setLayoutY(0);
             root.getChildren().add(webView);
         });
+        Image image = new Image("file:src/main/java/com/lucida/lucida/Image/rsz_9442811.jpg");
+        BackgroundImage backImage = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT
+        );
+        Background background = new Background(backImage);
+        root.setBackground(background);
 
         root.getChildren().addAll(mov1, mov2);
 
